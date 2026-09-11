@@ -1,7 +1,8 @@
 import Logo from '../assets/logo-text.png'
 const Nav = () => {
     return (
-        <nav className= 'sticky top-0 container px-4 py-4 mx-auto grid grid-cols-3'>
+        <div className='bg-white sticky top-0 '>
+        <nav className= 'container px-4 py-4 mx-auto grid grid-cols-3'>
 
             <img src={Logo} alt="DevStack LOGO" />
 
@@ -21,6 +22,7 @@ const Nav = () => {
 
 
         </nav>
+        </div>
         
     );
 };
