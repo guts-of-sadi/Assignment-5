@@ -1,7 +1,7 @@
 import Nav from "./components/Nav"
 import Banner from "./components/Banner"
 import Cards from "./components/ExploreTechcards/Cards"
-import { Suspense } from "react"
+import { Suspense} from "react"
 import type { CardTypes } from "./components/ExploreTechcards/CardTypes"
 
 
@@ -12,6 +12,9 @@ const promiseFetch = async ():Promise<CardTypes[]> => {
   const data = await res.json()
   return data;
 }
+
+
+
 function App() {
 
  const dataPromise = promiseFetch();

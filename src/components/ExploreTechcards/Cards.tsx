@@ -1,3 +1,4 @@
+
 import { use } from "react";
 import type { CardTypes } from "./CardTypes";
 import Technologies from "./Technologies";
@@ -6,6 +7,8 @@ import Technologies from "./Technologies";
 export interface CardsProps {
     dataPromise: Promise<CardTypes[]>;
 }
+
+
 
 const Cards = ({ dataPromise }: CardsProps) => {
 
@@ -16,7 +19,7 @@ const Cards = ({ dataPromise }: CardsProps) => {
 
         <div className="container mx-auto">
 
-            <Technologies dataused={dataused} />
+            <Technologies  dataused={dataused} />
 
         </div>
 
