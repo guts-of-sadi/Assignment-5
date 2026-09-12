@@ -12,6 +12,7 @@ export interface CardsProps {
 
 const Cards = ({ dataPromise }: CardsProps) => {
 
+   
     const dataused = use(dataPromise)
     // console.log(data);
 
