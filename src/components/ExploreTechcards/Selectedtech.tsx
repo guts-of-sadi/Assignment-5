@@ -16,14 +16,14 @@ const Selectedtech = ({ count, setCount, selectedTechs, setSelectedTech }: Selec
         const restTech = selectedTechs.filter(selectedTech => selectedTech.name !== tech.name)
         console.log(restTech);
         setSelectedTech(restTech)
-         const restCount = count - 1;
+        const restCount = count - 1;
         setCount(restCount)
     }
 
     const handleRemoveAll = () => {
-    setSelectedTech([]);
-    setCount(0);
-};
+        setSelectedTech([]);
+        setCount(0);
+    };
 
     return (
 
@@ -63,10 +63,12 @@ const Selectedtech = ({ count, setCount, selectedTechs, setSelectedTech }: Selec
                 }
             </div>
 
-            <button
-             onClick={()=>handleRemoveAll()}
-             disabled={count===0}
-            className="btn mt-3 flex items-center justify-center mx-auto text-[#D82C20] rounded-xl border-[#D82C20] px-[80px]">{count === 0 ?"":"Remove All"}</button>
+            {count > 0 && (
+                <button
+                    onClick={() => handleRemoveAll()}
+                    className="btn mt-3 flex items-center justify-center mx-auto text-[#D82C20] rounded-xl border-[#D82C20] px-20">Remove All</button>
+            )}
+
             <p className="flex justify-center items-center text-[#94A3B8]">
                 {count === 0 ? "Your stack is empty" : ""}</p>
         </div>

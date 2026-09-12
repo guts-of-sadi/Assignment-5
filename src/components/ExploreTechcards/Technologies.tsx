@@ -27,7 +27,7 @@ const Technologies = ({ dataused }: TechnologiesProps) => {
                         {
                             dataused.map((data: CardTypes) => {
                                 return (
-                                    <TechCard key={data.id} data={data} count={count} setCount={setCount} selectedTechs={selectedTechs} setSelectedTech={setSelectedTech} />
+                                    <TechCard key={data.id} data={data} count={count} setCount={setCount} selectedTechs={selectedTechs} setSelectedTech={setSelectedTech}/>
                                 )
                             })
                         }
