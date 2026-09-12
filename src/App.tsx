@@ -1,12 +1,13 @@
 import Nav from "./components/Nav"
 import Banner from "./components/Banner"
 import Cards from "./components/ExploreTechcards/Cards"
-import { Suspense} from "react"
+import { Suspense } from "react"
 import type { CardTypes } from "./components/ExploreTechcards/CardTypes"
+import Footer from "./components/Footer"
 
 
 
-const promiseFetch = async ():Promise<CardTypes[]> => {
+const promiseFetch = async (): Promise<CardTypes[]> => {
 
   const res = await fetch('/data.json')
   const data = await res.json()
@@ -17,8 +18,8 @@ const promiseFetch = async ():Promise<CardTypes[]> => {
 
 function App() {
 
- const dataPromise = promiseFetch();
- console.log(dataPromise);
+  const dataPromise = promiseFetch();
+  console.log(dataPromise);
 
 
   return (
@@ -27,11 +28,13 @@ function App() {
       <Banner />
 
       <Suspense fallback={<h2>Loading...</h2>}>
-           
-            <Cards dataPromise={dataPromise} />
+
+        <Cards dataPromise={dataPromise} />
 
       </Suspense>
-     
+      <Footer />
+
+
     </>
   )
 }
