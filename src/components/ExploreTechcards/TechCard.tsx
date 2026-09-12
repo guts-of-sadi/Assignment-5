@@ -1,5 +1,6 @@
 import { type Dispatch, type SetStateAction } from "react";
 import type { CardTypes } from "./CardTypes";
+import { toast } from "react-toastify";
 
 export interface TechCardProps {
     data: CardTypes;
@@ -20,9 +21,10 @@ const TechCard = ({ data, count, setCount, selectedTechs, setSelectedTech }: Tec
         setCount(totalProducts)
 
         setSelectedTech([...selectedTechs, data])
+        toast(`${data.name} added to your stack`)
     }
     return (
-        <div className="border border-white hover:border-blue-300  p-5  duration-300 hover:-translate-y-1   ">
+        <div className="border rounded-2xl border-white hover:border-blue-300  p-5  duration-300 hover:-translate-y-1   ">
 
             <div className="flex justify-between mb-1.5 ">
                 <img className="w-12 h-12 " key={data.id} src={data.icon} alt="" />
@@ -41,7 +43,7 @@ const TechCard = ({ data, count, setCount, selectedTechs, setSelectedTech }: Tec
                 onClick={() => handleAddButton()}
                 className={`btn bg-[#0A0F1D] text-[#f1f5f9] flex mx-auto border-2 rounded-xl py-2.5 px-20 hover:bg-blue-600 `}
                 disabled={isSelected}>
-                {isSelected === true ? "selected tech" : "Add To Stack"} </button> 
+                {isSelected === true ? "✓ Added to Stack" : "Add To Stack"} </button> 
         </div>
     )
 }

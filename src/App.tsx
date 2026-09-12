@@ -4,6 +4,7 @@ import Cards from "./components/ExploreTechcards/Cards"
 import { Suspense } from "react"
 import type { CardTypes } from "./components/ExploreTechcards/CardTypes"
 import Footer from "./components/Footer"
+import "react-toastify/dist/ReactToastify.css"
 
 
 
@@ -27,12 +28,14 @@ function App() {
       <Nav />
       <Banner />
 
-      <Suspense fallback={<h2>Loading...</h2>}>
+      <Suspense fallback={<h2 className="flex items-center justify-center text-6 font-bold text-gray-700">
+        Loading Data..</h2>}>
 
         <Cards dataPromise={dataPromise} />
 
       </Suspense>
       <Footer />
+
 
 
     </>

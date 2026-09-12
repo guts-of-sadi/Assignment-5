@@ -13,8 +13,8 @@ const banner = () => {
                     compare them side by side, and put together the stack that fits your<br />
                     next project.</p>
 
-                <button className="text-amber-50 btn bg-linear-to-br from-[#F97316] via-[#F35E57] to-[#EC4899] rounded-xl">Explore Technologies</button>
-                <button className="btn text-[#374151] rounded-xl py-3 px-4">Learn More</button>
+                <button className="duration-300 hover:-translate-y-1 text-amber-50 btn bg-linear-to-br from-[#F97316] via-[#F35E57] to-[#EC4899] rounded-xl">Explore Technologies</button>
+                <button className="btn duration-300 hover:-translate-y-1 text-[#374151] rounded-xl ml-3 py-3 px-10">Learn More</button>
             </div>
 
             <div className="flex justify-end">

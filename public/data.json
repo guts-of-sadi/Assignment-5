@@ -138,5 +138,15 @@
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
     "badge": "Popular"
-  }
+  },
+  {
+  "id": 15,
+  "name": "Kubernetes",
+  "category": "DevOps",
+  "description": "An open-source platform for automating the deployment, scaling, and management of containerized applications.",
+  "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-original.svg",
+  "rating": 4.8,
+  "difficulty": "Advanced",
+  "badge": "Containers"
+}
 ]
