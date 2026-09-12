@@ -14,7 +14,6 @@ export interface SelectedtechProps {
 const Selectedtech = ({ count, setCount, selectedTechs, setSelectedTech }: SelectedtechProps) => {
     const handleRemovetech = (tech: CardTypes) => {
         const restTech = selectedTechs.filter(selectedTech => selectedTech.name !== tech.name)
-        console.log(restTech);
         setSelectedTech(restTech)
         const restCount = count - 1;
         setCount(restCount)

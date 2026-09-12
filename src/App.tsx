@@ -20,9 +20,7 @@ const promiseFetch = async (): Promise<CardTypes[]> => {
 function App() {
 
   const dataPromise = promiseFetch();
-  console.log(dataPromise);
-
-
+  
   return (
     <>
       <Nav />
