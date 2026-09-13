@@ -83,8 +83,8 @@ const Selectedtech = ({ count, setCount, selectedTechs, setSelectedTech }: Selec
                     className="btn mt-3 flex items-center justify-center mx-auto text-[#D82C20] rounded-xl border-[#D82C20] px-20">Remove All</button>
             )}
 
-            <p className="flex justify-center items-center border border-blue-100 rounded-2xl py-5 text-[#94A3B8]">
-                {count === 0 ? "Your stack is empty" : ""}</p>
+            <p className="flex justify-center items-center hover:border hover:border-blue-100 rounded-2xl py-5 text-[#94A3B8]">
+                {count === 0 && "Your stack is empty"}</p>
         </div>
     )
 }
